@@ -4,7 +4,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 
 let Design = () => {
   return (
-    <>
+    <> 
           <div className="row justify-content-center mt-3">
           <h1 className="text-center fst-italic ms-5"><ins><span style={{color: 'red'}}>STUDENT </span>DETAILS</ins></h1>
           <br></br>
@@ -35,5 +35,7 @@ let Design = () => {
     </>
   );
 }
+
+
 
 export default Design;
