@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Firsthook } from './design';
+
+import { App } from './App';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <>
-     <Firsthook />
+     <App/>
     </>
 );
-
-
