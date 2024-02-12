@@ -36,6 +36,8 @@ export let Showall = () => {
     return Details;
 }
 
-
+export let Read = (get) => {
+    return Details[get];
+}
 
 

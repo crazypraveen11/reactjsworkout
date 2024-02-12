@@ -39,7 +39,7 @@ return (
             <h1 className="text-center fst-italic ms-5"><ins><span style={{color: 'red'}}>Employee </span>DETAILS</ins></h1>
             <br></br>
 
-        <form className=" row align-items-center  ms-2 col-lg-3 mt-4 me-4"> 
+        <div className=" row align-items-center  ms-2 col-lg-3 mt-4 me-4"> 
 
             <label className="form-label fw-bold">Name : </label>
             <input 
@@ -112,7 +112,7 @@ return (
             <div className="text-center mt-5">
             <button className="btn btn-success text-center" onClick={Add}>SUBMIT</button>
             </div>
-        </form>
+        </div>
         </div>
     </>
 )

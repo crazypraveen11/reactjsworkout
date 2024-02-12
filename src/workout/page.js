@@ -1,16 +1,20 @@
-import  {React } from "react";
+import  { React } from "react";
 import { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Form } from "../myform";
 import { Showall } from "./tempvalues";
+import { Readpage } from "./readpage";
+
 export let Homepage = () =>
 {
     var [page , setPage] = useState(false);
     var [tempvalues, setTempvalues] = useState([]);
+    var [readpage , setReadpage] = useState(false);
+    var [position , setPosition] = useState(0);    
 
     useEffect( () => {
         setTempvalues(Showall);
-    })
+    },[])
 
     return (
         <>
@@ -26,6 +30,18 @@ export let Homepage = () =>
                 Back
             </button>
             </>
+            :
+              (readpage) ?
+              <>
+
+              <Readpage give={position} />
+              <button className="btn btn-outline-secondary"
+              onClick={() => {
+                setReadpage(false)
+              }}>
+                Return
+              </button>
+              </>
             :
             <>
                 <button className="btn btn-outline-secondary"
@@ -44,12 +60,13 @@ export let Homepage = () =>
                             <th>Email</th>
                             <th>Place</th>
                             <th>Phonenumber</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             tempvalues.map(
-                                (element) => 
+                                (element, index) => 
                                 <>
                                 <tr>
                                 <td>{element.name}</td>
@@ -58,6 +75,18 @@ export let Homepage = () =>
                                 <td>{element.email}</td>
                                 <td>{element.place}</td>
                                 <td>{element.phonenumber}</td>
+                                <td>
+                                        <>
+                                        <button
+                                        className="btn btn-outline-info"
+                                        onClick={() => {
+                                            setReadpage(true);
+                                            setPosition(index)
+                                        }} >Read</button>
+                                        <button className="ms-2">Update</button>
+                                        <button className="ms-2">Delete</button>
+                                        </>
+                                </td>
                                 </tr>
                                 </>
                             )
