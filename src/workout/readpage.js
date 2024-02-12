@@ -22,26 +22,26 @@ export let Readpage = (position) => {
 
     return (
         <>
-         <div className="row justify-content-center">
-            <div className="card col-4">
-                <h1 className="text-center card-title">Information</h1>
-                <p className="card-text">
-                    Hello GoodMorning.
+         <div className="row justify-content-center fst-italic mt-5">
+            <div className="card col-5">
+                <h1 className="text-center card-title text-danger fw-bold text-decoration-underline fs-1 mt-4">INFORMATION</h1>
+                <p className="card-text text-center mt-4 fs-4">
+                    Hello GoodMorning.<br/>
 
-                    First of all thankyou for giving this opportunity to introduce myself.
+                    First of all thankyou for giving this opportunity to introduce myself.<br/>
 
-                    My name is Ashwin.J
+                    My name is Ashwin.J.<br/>
 
-                    My hobbies are reading books, cooking, and listening to music.
+                    My hobbies are reading books, cooking, and listening to music.<br/>
                 </p>
-                <ul>
+                <ol className="mt-3">
                     <li>{details.name}</li>
                     <li>{details.age}</li>
                     <li>{details.gender}</li>
                     <li>{details.email}</li>
                     <li>{details.place}</li>
                     <li>{details.phonenumber}</li>
-                </ul>
+                </ol>
             </div>
          </div>
         </>
