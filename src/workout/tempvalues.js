@@ -25,7 +25,25 @@
         email: "ash@gmail.com",
         place: "Tiruchengode",
         phonenumber: 9587589655
-    }  
+    },
+    
+    {
+        name: "AjithKumar",
+        age: 21,
+        gender: "Male" ,
+        email: "smiley@gmail.com",
+        place: "Tiruchengode",
+        phonenumber: 6985741236
+    },
+
+    {
+        name: "Kumar",
+        age: 21,
+        gender: "Male" ,
+        email: "kumar@gmail.com",
+        place: "Trichy",
+        phonenumber: 6321459875  
+    }
  ];
 
 export let Create = (get) => {
