@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react'
+import { Create } from './workout/tempvalues'
 
 export let Form = () => {
     var [details, setDetails] = useState(
@@ -7,7 +8,7 @@ export let Form = () => {
             name: "",
             age: 0,
             gender:"",
-            email: "",
+            email: "", 
             place: "",
             phonenumber: 0
         })
@@ -28,7 +29,8 @@ export let Form = () => {
 
         var Add = () =>
         {
-            alert("Registered Successfully..!" + JSON.stringify(details) )
+            alert("Registered Successfully..!" + JSON.stringify(details) );
+            Create(details);
         }
 
 return (
@@ -37,7 +39,7 @@ return (
             <h1 className="text-center fst-italic ms-5"><ins><span style={{color: 'red'}}>Employee </span>DETAILS</ins></h1>
             <br></br>
 
-        <form className=" row align-items-center  ms-3 col-lg-3 mt-4 me-4"> 
+        <form className=" row align-items-center  ms-2 col-lg-3 mt-4 me-4"> 
 
             <label className="form-label fw-bold">Name : </label>
             <input 
@@ -61,22 +63,22 @@ return (
 
              <label className="form-label fw-bold" >Gender : </label>
             <input 
-                type='radio' 
+                type='radio' className='form-input-check col'
                 name='gender' 
-                value={details.gender} 
-                onChange={Setter}> Male</input>
+                value="Male"
+                onChange={Setter}/>Male
             <input 
-                type='radio' 
+                type='radio' className='form-input-check col'
                 name='gender' 
-                value={details.gender} 
-                onChange={Setter}> Female</input>
+                value="Female"
+                onChange={Setter}/> Female
             <input 
-                type='radio' 
+                type='radio' className='form-input-check col'
                 name='gender' 
-                value={details.gender} 
-                onChange={Setter}> Other</input>
-            <br></br><br></br>
-
+                value="Other" 
+                onChange={Setter}/>Other
+            <br></br>
+            
             <label className="form-label fw-bold">Email : </label>
             <input 
                 type='email' 
@@ -84,7 +86,7 @@ return (
                 onChange={Setter} 
                 name='email' 
                 value={details.email} 
-                placeholder="Enter your Email"></input>
+                placeholder="Enter your Email" />
             <br></br><br></br>
 
             <label className="form-label fw-bold">Place : </label>
@@ -94,7 +96,7 @@ return (
                 onChange={Setter} 
                 name='place' 
                 value={details.place} 
-                placeholder="Enter your Place"></input>
+                placeholder="Enter your Place" />
             <br></br><br></br>
 
             <label className="form-label fw-bold">Phone Number : </label>
@@ -104,7 +106,7 @@ return (
                 name='phonenumber' 
                 value={details.phonenumber}
                 onChange={Setter} 
-                placeholder="Enter your Phone Number"></input>
+                placeholder="Enter your Phone Number" />
             <br></br><br></br>
 
             <div className="text-center mt-5">

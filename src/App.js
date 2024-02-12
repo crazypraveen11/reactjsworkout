@@ -1,19 +1,22 @@
+
 // import { Navigate } from "./navigation";
-// import {BrowserRouter, Route, Routes} from 'react-router-dom'
-// import Design from "./form";
-import { Form } from "./myform";
+
+
+import { Homepage } from "./workout/page";
+
+// import { Car } from "./hook";
+
+
 
 export function App(){
-
+ 
     return(
         <>
-        {/* <BrowserRouter>
-        <Navigate/>
-        <Routes>
-            <Route path="home" exact element={<Design />} />
-        </Routes>
-        </BrowserRouter> */}
-        < Form/>
+        {/* <Navigate/> */}
+        {/* < Form/> */}
+        {/* < Page/> */}
+        {/* <Car /> */}
+        <Homepage/>
         </>
     )
 }

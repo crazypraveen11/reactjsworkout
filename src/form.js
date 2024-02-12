@@ -24,7 +24,7 @@ let Design = () => {
             <input type='number' className="form-control ms-5" placeholder="Enter your PAN Number"></input>
             <br></br>
             <div className="text-center mt-5">
-            <button className="btn btn-success text-center">SUBMIT</button>
+            <button className="btn btn-outline-success text-center">SUBMIT</button>
             </div>
         </form>
         </div>
