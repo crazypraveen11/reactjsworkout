@@ -58,4 +58,26 @@ export let Read = (get) => {
     return Details[get];
 }
 
+export let Erase = (index) => {
+     Details = Details.filter (
+        (data,pos) => {
+            return pos !== index;
+        }
+     )
+    return Details;
+}
 
+
+export let  Fetchexact = (name) =>{
+    var temp = Details.filter(
+        (data,index) => {
+            return data.name === name;
+        }
+    )
+    return temp[0];
+}
+
+export let Reedit = (data,pos) => {
+    Details[pos] = data;
+
+}

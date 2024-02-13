@@ -2,15 +2,19 @@ import  { React } from "react";
 import { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Form } from "../myform";
-import { Showall } from "./tempvalues";
+import { Fetchexact, Showall } from "./tempvalues";
 import { Readpage } from "./readpage";
+import {Erase} from "./tempvalues";
+import { Updatepage } from "./updatepage";
 
 export let Homepage = () =>
 {
     var [page , setPage] = useState(false);
     var [tempvalues, setTempvalues] = useState([]);
     var [readpage , setReadpage] = useState(false);
-    var [position , setPosition] = useState(0);    
+    var [position , setPosition] = useState(0);  
+    var [updatepage, setUpdatepage] = useState(false);
+    var [obj, setObj] = useState([])
 
     useEffect( () => {
         setTempvalues(Showall);
@@ -23,7 +27,7 @@ export let Homepage = () =>
             (page) ?
             <>
             <Form/>
-            <button className="btn btn-outline-secondary"
+            <button className="btn btn-outline-info ms-5"
             onClick={() => {
                 setPage(false)
             }} >
@@ -35,7 +39,7 @@ export let Homepage = () =>
               <>
 
               <Readpage give={position} />
-              <button className="btn btn-outline-secondary"
+              <button className="btn btn-outline-danger"
               onClick={() => {
                 setReadpage(false)
               }}>
@@ -43,14 +47,24 @@ export let Homepage = () =>
               </button>
               </>
             :
+             (updatepage)?
+             <>
+             <Updatepage who= {position} mention={obj} />
+             <button className="btn btn-outline-secondary"
+             onClick={() => {
+                setUpdatepage(false);
+             }}
+             >BACK</button>
+             </>
+             :
             <>
-                <button className="btn btn-outline-secondary"
+                <button className="btn btn-outline-success mt-5 ms-5"
                 onClick={() => {
                     setPage(true)
                 }}>
                 Register
             </button>
-            <div className="container mt-5">
+            <div className="container mt-5 text-center">
                 <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
@@ -83,8 +97,18 @@ export let Homepage = () =>
                                             setReadpage(true);
                                             setPosition(index)
                                         }} >Read</button>
-                                        <button className="ms-2">Update</button>
-                                        <button className="ms-2">Delete</button>
+                                        <button className="ms-2 btn btn-outline-success"
+                                        onClick={()=>{
+                                             setUpdatepage(true);
+                                             setPosition(index);
+                                             setObj(Fetchexact(element.name))
+                                        }}
+                                         >Update</button>
+                                        <button className="ms-2 btn btn-outline-danger"
+                                        onClick={()=>{
+                                            setTempvalues(Erase(index));
+                                        }}
+                                         >Delete</button>
                                         </>
                                 </td>
                                 </tr>

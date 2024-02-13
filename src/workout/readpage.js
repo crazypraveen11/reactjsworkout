@@ -11,13 +11,13 @@ export let Readpage = (position) => {
             email: "", 
             place: "",
             phonenumber: 0
-
         }
     )
     
     useEffect ( () => {
         setDetails(Read(position.give))
-    },[position.give])
+    },[position.give]) 
+    // second argument is for temporary [position.give]//
 
 
     return (

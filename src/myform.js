@@ -36,7 +36,7 @@ export let Form = () => {
 return (
     <>
     <div className="row justify-content-center mt-3">
-            <h1 className="text-center fst-italic ms-5"><ins><span style={{color: 'red'}}>Employee </span>DETAILS</ins></h1>
+            <h1 className="text-center fst-italic ms-5"><ins><span style={{color: 'red'}}>EMPLOYEE </span>DETAILS</ins></h1>
             <br></br>
 
         <div className=" row align-items-center  ms-2 col-lg-3 mt-4 me-4"> 
@@ -110,7 +110,7 @@ return (
             <br></br><br></br>
 
             <div className="text-center mt-5">
-            <button className="btn btn-success text-center" onClick={Add}>SUBMIT</button>
+            <button className="btn btn-outline-success text-center" onClick={Add}>SUBMIT</button>
             </div>
         </div>
         </div>
