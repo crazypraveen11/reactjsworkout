@@ -89,7 +89,7 @@ export let Homepage = () =>
                                 <td>{element.email}</td>
                                 <td>{element.place}</td>
                                 <td>{element.phonenumber}</td>
-                                <td>
+                                <td> 
                                         <>
                                         <button
                                         className="btn btn-outline-info"

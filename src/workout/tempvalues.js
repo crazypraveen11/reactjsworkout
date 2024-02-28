@@ -16,7 +16,7 @@
         email: "priya@gmail.com",
         place: "Salem",
         phonenumber: 6232423794
-    },
+    }, 
 
     {
         name: "Ashwin",

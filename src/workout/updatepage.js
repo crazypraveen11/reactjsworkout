@@ -10,7 +10,7 @@ export let Updatepage = (char) => {
         {
             name: char.mention.name,
             age: char.mention.age,
-            gender: char.mention.gender,
+            gender: char.mention.gender, 
             email: char.mention.email,
             place: char.mention.place,
             phonenumber: char.mention.phonenumber
